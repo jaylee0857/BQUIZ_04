@@ -5,6 +5,8 @@
 
     if ($ch>0) {
         echo "1";
+        $_SESSION['mem']=$_POST['acc'];
+
     }else{
         echo "0";
     }

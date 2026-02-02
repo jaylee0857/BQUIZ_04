@@ -1,5 +1,11 @@
 <?php
 	include_once "./api/db.php";
+
+	if (isset($_SESSION['admin'])) {
+		$admin =$Admin->find(['acc'=>$_SESSION['admin']]);
+		$pr = json_decode($admin['pr'],true);
+		// dd($pr);
+	}
 ?>
 <!DOCTYPE html
 	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -26,11 +32,41 @@
 		<div id="left" class="ct">
 			<div style="min-height:400px;">
 				<a href="?do=admin">管理權限設置</a>
-				<a href="?do=th">商品分類與管理</a>
-				<a href="?do=order">訂單管理</a>
-				<a href="?do=mem">會員管理</a>
-				<a href="?do=bot">頁尾版權管理</a>
-				<a href="?do=news">最新消息管理</a>
+				<?php
+					if (in_array(1,$pr)) :
+				?>
+					<a href="?do=th">商品分類與管理</a>
+				<?php
+					endif
+				?>
+				<?php
+					if (in_array(2,$pr)) :
+				?>
+					<a href="?do=order">訂單管理</a>
+				<?php
+					endif
+				?>
+				<?php
+					if (in_array(3,$pr)) :
+				?>
+					<a href="?do=mem">會員管理</a>
+				<?php
+					endif
+				?>
+				<?php
+					if (in_array(4,$pr)) :
+				?>
+					<a href="?do=bot">頁尾版權管理</a>
+				<?php
+					endif
+				?>
+				<?php
+					if (in_array(5,$pr)) :
+				?>
+					<a href="?do=news">最新消息管理</a>
+				<?php
+					endif
+				?>
 				<a href="?do=logout" style="color:#f00;">登出</a>
 			</div>
 		</div>

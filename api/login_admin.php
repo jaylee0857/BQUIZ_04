@@ -5,6 +5,7 @@
 
     if ($ch>0) {
         echo "1";
+        $_SESSION['admin']=$_POST['acc'];
     }else{
         echo "0";
     }
