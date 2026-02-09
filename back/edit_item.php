@@ -23,7 +23,7 @@
         <tr>
             <td class="tt">商品編號</td>
             <td class="pp">
-                <input type="text" name="no" value="<?=$row['no']?>">
+                <?=$row['no']?>
             </td>
         </tr>
         <tr>

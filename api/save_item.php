@@ -6,8 +6,8 @@ if (!empty($_FILES['img']['tmp_name'])) {
 }
 // dd($_POST);
 
-// 商品編號保證唯一性 , 記得在edit_item.php 補上欄位
-if (!isset($_POST['no'])) {
+// 商品編號保證唯一性 , 記得在edit_item.php 補上欄位 用ID判斷是新增還是編輯
+if (!isset($_POST['id'])) {
     $_POST['no']=rand(100000,999999);
 }
 
