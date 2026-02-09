@@ -38,6 +38,30 @@
         <div id="left" class="ct">
             <div style="min-height:400px;">
                 <!-- 分類選單 -->
+                 <!-- 左側的選單 雙重迴圈結構 -->
+                <a href="?type=0">全部商品(<?=$Item->count(['sh'=>1])?>)</a>
+                 <?php
+                    $rows = $Type->all(['big_id'=>0]);
+                    foreach ($rows as $row) :
+                    $num = $Item->count(['sh'=>1,'big'=>$row['id']]);
+
+                 ?>
+                 <div class="ww">
+                    <a href="?type=<?=$row['id']?>"><?=$row['name']?>(<?=$num?>)</a>
+                    <?php
+                        $rows = $Type->all(['big_id'=>$row['id']]);
+                        foreach ($rows as $row) {
+                            $num = $Item->count(['sh'=>1,'mid'=>$row['id']]);
+                            echo "<div class='s'>";
+                            echo "<a href='?type={$row['id']}'>{$row['name']}($num)</a>";
+                            echo "</div>";
+                        }
+                    ?>
+                 </div>
+                    
+                <?php
+                    endforeach
+                 ?>
             </div>
             <span>
                 <div>進站總人數</div>
