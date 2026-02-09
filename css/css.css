@@ -46,11 +46,15 @@ body
 	display:inline-block;
 	width:65%;
 	padding:2%;
-	min-height:550px;
+	/* 要改 */
+	height:550px; 
+	/* 要改 */
 	border:#000 1px solid;
 
 	/* 新增的 */
+	/* 要改 */
 	overflow: auto;
+	/* 要改 */
 }
 #bottom
 {
@@ -110,9 +114,11 @@ input[type=text],input[type=password]
 	display:none;
 
 }
+/* 要改 */
 .s a{
 	background-color: lightgreen !important;
 }
+/* 要改 */
 div.ww:hover > div.s
 {
 	display:block;
