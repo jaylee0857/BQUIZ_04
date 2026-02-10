@@ -3,12 +3,10 @@
         $rows = $Item->all(['sh'=>1]);
         // dd($rows);
     }else{
-
         if (isset($_GET['mid_name'])) {
             $rows = $Item->all(['sh'=>1,'mid'=>$_GET['type_id']]);
         }else{
             $rows = $Item->all(['sh'=>1,'big'=>$_GET['type_id']]);
-
         }
     }
 
@@ -20,10 +18,10 @@
     <?php
         foreach ($rows as $row):
     ?>
-        <div style="display:flex">
+        <div style="display:flex" class="all">
             <div class="pp">
                 <a href="?do=detail&id=<?=$row['id']?>">
-                    <img width="100px" height="100px" src="./upload/<?=$row['img']?>" alt="">
+                    <img width="100px" height="80px" src="./upload/<?=$row['img']?>" alt="">
                 </a>
             </div>
             <div style="flex:1">
