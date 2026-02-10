@@ -17,8 +17,6 @@ body
 	color:#CE631C;
 	text-decoration:none;
 }
-#top{
-}
 #left
 {
 	display:inline-block;
@@ -46,15 +44,8 @@ body
 	display:inline-block;
 	width:65%;
 	padding:2%;
-	/* 要改 */
-	height:550px; 
-	/* 要改 */
+	min-height:550px;
 	border:#000 1px solid;
-
-	/* 新增的 */
-	/* 要改 */
-	overflow: auto;
-	/* 要改 */
 }
 #bottom
 {
@@ -62,8 +53,6 @@ body
 	background:url(icon/bot.png);
 	background-size:cover;
 }
-
-/* 這段CSS要被 好用再開表 */
 .al
 {
 	padding:10px;
@@ -76,7 +65,7 @@ body
 }
 .all td
 {
-	min-width:50px;
+	min-width:100px;
 	padding:10px;
 }
 .tt
@@ -112,13 +101,7 @@ input[type=text],input[type=password]
 .s
 {
 	display:none;
-
 }
-/* 要改 */
-.s a{
-	background-color: lightgreen !important;
-}
-/* 要改 */
 div.ww:hover > div.s
 {
 	display:block;
