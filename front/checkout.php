@@ -74,6 +74,6 @@
      </div>
      <div class="ct">
         <input type="submit" value="確定送出">
-         <input type="button" value="返回">
+         <input type="button" value="返回" onclick="location.href='?do=buycart'">
      </div>
  </form>

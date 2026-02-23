@@ -57,13 +57,10 @@ if (empty($cart)) {
             </td>
         </tr>
     <?php endforeach; ?>
-
-    <tr class="tt">
-        <td colspan="5">總計</td>
-        <td><?= $total; ?></td>
-        <td></td>
-    </tr>
 </table>
+<div class="all tt ct">
+    總計: <?= $total; ?>
+</div>
 
 <div class="ct">
     <img src="./icon/0411.jpg" onclick="location.href='index.php'">
