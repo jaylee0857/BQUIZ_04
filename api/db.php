@@ -158,6 +158,6 @@ $Mem= new DB("mem");
 $Admin= new DB("admin");
 $Type= new DB("type");
 $Item= new DB("item");
-
+$Orders= new DB("orders");
 
 ?>
