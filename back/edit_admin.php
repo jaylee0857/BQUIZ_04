@@ -1,5 +1,5 @@
 <h2>修改管理帳號</h2>
-<form action="./api/add_admin.php" method="post">
+<form action="./api/save_admin.php" method="post">
     <table class="all">
         <tr>
             <td class="tt">帳號</td>
@@ -27,7 +27,7 @@
     </table>
 <div class="ct">
     <input type="hidden" name="id" value="<?=$_GET['id']?>">
-    <input type="submit" value="新增">
+    <input type="submit" value="編輯">
     <input type="reset" value="重置">
 </div>
 </form>

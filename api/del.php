@@ -1,7 +1,7 @@
 <?php
     include_once "db.php";
 
-    $db = ${$_GET['table']};
+    $db = ${$_POST['table']};
     $db->del($_POST['id']);
 
 ?>

@@ -1,26 +1,22 @@
 <?php
+ob_start();
 session_start();
-
 date_default_timezone_set("Asia/Taipei");
-
-
 function dd($data){
     echo "<pre>";
     print_r($data);
     echo "</pre>";
+    exit;
 }
-
 function to($url){
     header("location: $url");
 }
-
 function q($sql){
     $dsn = "mysql:host=localhost;charset=utf8;dbname=db04_1";
     $pdo =  new PDO(dsn,'root','');
     return $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 
 }
-
 class DB{
     private $dsn = "mysql:host=localhost;dbname=db04_1;charset=utf8;";
     private $pdo;
@@ -152,12 +148,10 @@ class DB{
     }
 
 }
-
 $Bot= new DB("bot");
 $Mem= new DB("mem");
 $Admin= new DB("admin");
 $Type= new DB("type");
 $Item= new DB("item");
-
-
+$Orders = new DB("orders");
 ?>

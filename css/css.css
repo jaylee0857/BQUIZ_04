@@ -65,7 +65,8 @@ body
 }
 .all td
 {
-	min-width:100px;
+	/* 這段可以移除 */
+	/* min-width:100px; */
 	padding:10px;
 }
 .tt
@@ -105,6 +106,11 @@ input[type=text],input[type=password]
 div.ww:hover > div.s
 {
 	display:block;
+}
+div.s a
+{
+	background:#F3F3F3 !important;
+
 }
 .sb button
 {

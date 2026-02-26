@@ -1,11 +1,11 @@
-<?php
-    include_once "./api/db.php";
+<?php 
+
+include_once "./api/db.php";
 ?>
 <!DOCTYPE html
     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0039) -->
 <html xmlns="http://www.w3.org/1999/xhtml">
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
@@ -15,7 +15,6 @@
     <script src="./js/js.js"></script>
 
 </head>
-
 <body>
     <div id="main">
         <div id="top">
@@ -35,6 +34,27 @@
         </div>
         <div id="left" class="ct">
             <div style="min-height:400px;">
+                <a href="?">全部商品(<?=$Item->count(['sh'=>1])?>)</a>
+                <?php
+                    $bigs = $Type->all(['big_id'=>0]);
+                    foreach ($bigs as $big ):
+                ?>
+                    <div class="ww">
+                        <a href="?id=<?=$big['id']?>&big_name=<?=$big['name']?>"><?=$big['name']?>(<?=$Item->count(['sh'=>1,'big'=>$big['id']])?>)</a>
+                        <div class="s">
+                            <?php
+                                $mids = $Type->all(['big_id'=>$big['id']]);
+                                foreach ($mids as $mid ):
+                            ?>
+                            <a href="?id=<?=$mid['id']?>&big_name=<?=$big['name']?>&mid_name=<?=$mid['name']?>"><?=$mid['name']?>(<?=$Item->count(['sh'=>1,'big'=>$big['id']])?>)</a>
+                        <?php
+                            endforeach;
+                        ?>
+                        </div>
+                    </div>
+                <?php
+                    endforeach;
+                ?>
             </div>
             <span>
                 <div>進站總人數</div>

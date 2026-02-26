@@ -39,7 +39,7 @@
 
 
 function del(id){
-	$.post("./api/del.php?table=Admin",{id},function(){
+	$.post("./api/del.php",{id,table:'Admin'},function(){
 		location.reload();
 	})
 }
