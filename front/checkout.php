@@ -1,6 +1,6 @@
 <h2 class="ct">填寫資料</h2>
 <!-- 用兩張表來製作比較快 -->
- <!-- 第一章標示資料 -->
+ <!-- 第一章 重edit_mem複製 -->
  <!-- 第二章直接從buycart複製 -->
 
  <form action="./api/save_order.php" method="post">

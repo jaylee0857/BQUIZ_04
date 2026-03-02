@@ -3,7 +3,7 @@
 ?>
 <h2 class="ct">訂單編號的 <span style="color:red;"><?=$row['no']?></span> 詳細資料</h2>
 <!-- 用兩張表來製作比較快 -->
- <!-- 第一個表 直接從mem複製 -->
+ <!-- 第一個表 直接從edit_mem複製 -->
  <!-- 第二個表 直接從buycart複製 -->
 
  <form action="./api/save_order.php" method="post">
