@@ -11,12 +11,8 @@ function dd($data){
 function to($url){
     header("location: $url");
 }
-function q($sql){
-    $dsn = "mysql:host=localhost;charset=utf8;dbname=db04_1";
-    $pdo =  new PDO(dsn,'root','');
-    return $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 
-}
+
 class DB{
     private $dsn = "mysql:host=localhost;dbname=db04_1;charset=utf8;";
     private $pdo;
